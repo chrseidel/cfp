@@ -60,4 +60,10 @@ class HuffmanSuite extends FunSuite {
     }
   }
 
+  test("quickencode") {
+    val input = "thisisasupersecrettexjwenrflkwejrnlfwkejrfnlkjfnkjeirjoirueorifwehrfjsdhlgfkjsdbfuvwhoebrvwuerbovsuyrbosvdfvaskjfsdflkvjsdndsjkfvndt".toList
+    val secret = quickEncode(frenchCode)(input)
+    assert(decode(frenchCode, secret).mkString.equals(input.mkString))
+  }
+
 }
